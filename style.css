@@ -1,0 +1,159 @@
+/* Стили для всего тела документа */
+body {
+    margin: 0; /* Убираем отступы по умолчанию */
+    font-family: Arial, sans-serif; /* Устанавливаем шрифт по умолчанию */
+    flex-direction: column; /* Добавляем это свойство */
+    min-height: 100vh; /* Добавляем это свойство */
+}
+
+/* Контейнер .F - основной контейнер для контента */
+.F {
+    display: flex; /* или display: grid; */
+    flex-direction: column;
+    max-width: 960px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 15px; /* Отступы слева и справа */
+    flex: 1;
+}
+
+/* Стили для header и footer */
+header, footer {
+    background-color: #074207 ; /* Цвет фона - темно-зеленый */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    text-align: left; /* Выравнивание текста по центру */
+    width: 100%; /* Ширина на всю доступную область */
+    box-sizing: border-box;
+
+}
+
+/* Стили для логотипа .L */
+.L {
+    float: left; /* Размещение слева */
+    max-width: 100px; /* Максимальная ширина логотипа */
+    margin-right: 20px; /* Отступ справа */
+}
+
+/* Стили для навигационного меню */
+nav {
+    float: right; /* Размещение справа */
+}
+
+nav ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем отступы */
+}
+
+nav ul li {
+    display: inline-block; /* Элементы списка в строку */
+    margin-left: 20px; /* Отступ слева между элементами */
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%; /* Ширина таблицы на всю доступную область */
+    border-collapse: collapse; /* Объединение границ ячеек */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+table th, table td {
+    padding: 10px; /* Внутренние отступы ячеек */
+    border: 1px solid #000000; /* Граница черного цвета */
+}
+
+/* Стили для объединенных ячеек */
+th[colspan], td[colspan] {
+    background-color: #074207; /* Фон для объединенных по горизонтали */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+th[rowspan], td[rowspan] {
+    vertical-align: top; /* Выравнивание по верху */
+    background-color: #000000; /* Черный фон */
+}
+
+/* Стили для строк таблицы */
+table tbody tr:nth-child(even) {
+    background-color: #1c4e0f; /* Цвет для четных строк */
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #201c1c; /* Цвет для нечетных строк */
+    color: #fff; /* Белый цвет текста */
+}
+
+/* Стили для заголовка таблицы */
+table thead {
+    background-color: transparent; /* Прозрачный фон */
+    color: #ffffff; /* Белый цвет текста */
+}
+
+table thead th {
+    background-color: transparent; /* Дополнительный прозрачный фон */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #000000; /* Граница черного цвета */
+}
+main .F {
+    display: flex;         /* Включаем flex-контейнер */
+    flex-direction: column; /* Элементы в столбик */
+}
+
+/* Для мобильных устройств */
+
+@media (max-width: 767px) {
+    .links {
+        order: 3;
+    }
+    h2:first-of-type { /* Заголовок "Таблица" */
+        order: 1;
+    }
+    .data {
+        order: 2;
+    }
+    h2:nth-of-type(2) { /* Заголовок "Форма" */
+        order: 4;
+    }
+    form {
+        order: 5;
+        margin-top: auto; /* "Прижимаем" форму к низу */
+    }
+
+    nav{
+        float:left;
+        background-color: #ffffff !important;
+        width: 100%; /* На всю ширину экрана */
+        margin-left: 0; /* Убираем возможные отступы слева */
+        padding: 10px 0; /* Вертикальные отступы для читаемости */
+        box-sizing: border-box; /* Учитываем padding в общей ширине */
+    }
+
+    nav ul {
+
+        flex-direction: column; /* Каждый пункт — с новой строки */
+        align-items: flex-start; /* Выравнивание по левому краю */
+        width: 100%; /* Список на всю ширину */
+        padding: 0 15px; /* Внутренние отступы (если нужно) */
+        box-sizing: border-box;
+    }
+
+    nav li {
+        width: 100%; /* Пункт занимает всю ширину */
+        text-align: left; /* Текст слева */
+        margin-bottom: 12px; /* Немного увеличим отступ для читаемости */
+    }
+
+}
+
+/* Для планшетов и десктопов */
+@media (min-width: 768px) {
+    main .F {
+        flex-direction: column; /* Сохраняем вертикальный порядок */
+    }
+}
+
+/* Дополнительные стили для всех элементов */
+table, ul, .cla {
+    width: 100%;         /* Элементы на всю ширину */
+    margin-bottom: 20px; /* Отступы между элементами */
+}
+.F { display: flex; flex-direction: column; }
